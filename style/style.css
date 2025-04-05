@@ -1,0 +1,207 @@
+/**
+ * Reset
+ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/**
+* Eléments génériques
+*/
+
+body {
+  --couleur-jaune: #f4f754;
+  --couleur-rose: #c996eb;
+  --couleur-mauve: #382a52;
+}
+
+/* Mise en forme des titres */
+h1 {
+  margin: 20px;
+  font-size: 80px;
+  font-weight: 900;
+  color: var(--couleur-mauve);
+}
+
+h2 {
+  margin: 10px;
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--couleur-jaune);
+}
+
+h3 {
+  margin: 10px;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--couleur-jaune);
+}
+
+/* Mise en forme des formulaires */
+input[type="radio"] {
+  filter: grayscale(1); /* Grayscale passe le bouton en niveau de gris */
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  margin-right: 10px;
+  padding: 5px;
+  border: none;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--couleur-jaune);
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder {
+  color: var(--couleur-jaune);
+  opacity: 50%;
+}
+
+button {
+  padding: 5px;
+  border: none;
+  border-radius: 8px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--couleur-jaune);
+  background-color: var(--couleur-mauve);
+}
+
+button:hover {
+  color: var(--couleur-rose);
+  background-color: var(--couleur-mauve);
+  cursor: pointer;
+}
+
+button:focus {
+  background-color: var(--couleur-mauve);
+  border: 3px solid var(--couleur-jaune);
+  padding: 2px;
+}
+
+/**
+* Eléments principaux
+*/
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--couleur-mauve);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  min-width: 200px;
+  margin-bottom: 50px;
+  padding: 50px;
+  text-align: center;
+  color: white;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 30px;
+  background-color: var(--couleur-rose);
+}
+
+footer {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 30px;
+  font-weight: 600;
+  font-size: 17px;
+  color: white;
+  background-color: var(--couleur-rose);
+}
+
+/**
+* Mise en forme des éléments de la zone principale
+*/
+
+/* Zone d'options */
+.optionSource {
+  margin: 20px;
+}
+
+.optionSource input[type="radio"]:not(:first-child) {
+  margin-left: 20px;
+}
+
+/* Zone ou sera affiché le texte (mot ou phrase) à afficher */
+.zoneProposition {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 10px 0 10px 0;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: var(--couleur-mauve);
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--couleur-jaune);
+}
+
+/* Zone de saisie */
+.zoneSaisie {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+/* Eléments du formulaire de saisie */
+.zoneSaisie input[type="text"] {
+  width: 80%;
+  background-color: var(--couleur-mauve);
+  color: var(--couleur-jaune);
+}
+
+.zoneSaisie button {
+  width: 20%;
+}
+
+.zoneScore {
+  font-size: 20px;
+}
+
+/** 
+* Responsive
+*/
+
+/* En dessous de 1200 px */
+@media screen and (max-width: 1200px) {
+  main {
+    width: 60%;
+    padding: 30px;
+  }
+}
+
+/* En dessous de 800 px */
+@media screen and (max-width: 800px) {
+  main {
+    width: 90%;
+    padding: 10px;
+  }
+}
