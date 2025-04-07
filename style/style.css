@@ -11,10 +11,13 @@
 * Eléments génériques
 */
 
-body {
-  --couleur-jaune: #f4f754;
-  --couleur-rose: #c996eb;
-  --couleur-mauve: #382a52;
+* {
+  --jaune: #f4f754;
+  --rose: #c996eb;
+  --mauve: #382a52;
+  --noir: black;
+  --blanc: white;
+  background-color: var(--noir);
 }
 
 /* Mise en forme des titres */
@@ -23,20 +26,24 @@ h1 {
   font-size: 80px;
   font-weight: 900;
   color: var(--couleur-mauve);
+  background-color: var(--mauve);
+  border-radius: 10px;
+  border-style: double;
+  border-color: var(--rose);
 }
 
 h2 {
   margin: 10px;
   font-size: 30px;
   font-weight: 600;
-  color: var(--couleur-jaune);
+  color: var(--jaune);
 }
 
 h3 {
   margin: 10px;
   font-size: 17px;
   font-weight: 500;
-  color: var(--couleur-jaune);
+  color: var(--jaune);
 }
 
 /* Mise en forme des formulaires */
@@ -54,12 +61,12 @@ input[type="email"] {
   font-size: 17px;
   font-weight: 600;
   font-size: 17px;
-  color: var(--couleur-jaune);
+  color: var(--jaune);
 }
 
 input[type="text"]::placeholder,
 input[type="email"]::placeholder {
-  color: var(--couleur-jaune);
+  color: var(--jaune);
   opacity: 50%;
 }
 
@@ -70,19 +77,19 @@ button {
   font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-size: 17px;
-  color: var(--couleur-jaune);
+  color: var(--jaune);
   background-color: var(--couleur-mauve);
 }
 
 button:hover {
-  color: var(--couleur-rose);
+  color: var(--rose);
   background-color: var(--couleur-mauve);
   cursor: pointer;
 }
 
 button:focus {
   background-color: var(--couleur-mauve);
-  border: 3px solid var(--couleur-jaune);
+  border: 3px solid var(--jaune);
   padding: 2px;
 }
 
@@ -101,7 +108,7 @@ body {
 
 header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
 }
 
@@ -119,7 +126,7 @@ main {
   font-size: 17px;
   font-weight: 500;
   border-radius: 30px;
-  background-color: var(--couleur-rose);
+  background-color: var(--rose);
 }
 
 footer {
@@ -128,11 +135,12 @@ footer {
   display: flex;
   justify-content: center;
   width: 100%;
+  height: 150px;
   padding: 30px;
   font-weight: 600;
   font-size: 17px;
   color: white;
-  background-color: var(--couleur-rose);
+  background-color: var(--rose);
 }
 
 /**
@@ -160,7 +168,7 @@ footer {
   background-color: var(--couleur-mauve);
   font-size: 30px;
   font-weight: 600;
-  color: var(--couleur-jaune);
+  color: var(--jaune);
 }
 
 /* Zone de saisie */
@@ -175,7 +183,7 @@ footer {
 .zoneSaisie input[type="text"] {
   width: 80%;
   background-color: var(--couleur-mauve);
-  color: var(--couleur-jaune);
+  color: var(--jaune);
 }
 
 .zoneSaisie button {
